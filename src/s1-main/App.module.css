@@ -1,11 +1,36 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body,
+pre,
+textarea,
+button {
+	font-family: 'Montserrat', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	border: none;
+}
+
 .App {
-    --header_height: 60px;
+	--header_height: 60px;
+	padding: 131px 0px 34px;
 }
 
 .hw {
-
+	border-top: 1px solid rgb(217, 217, 217);
+	border-bottom: 1px solid rgb(217, 217, 217);
+	padding: 35px 70px;
 }
 
 .hwTitle {
-
+	font-weight: 600;
+	font-size: 1.38rem;
+	margin-left: 4.38rem;
+	margin-bottom: 10px;
 }
