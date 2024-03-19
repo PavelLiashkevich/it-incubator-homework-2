@@ -24,6 +24,7 @@
 	box-shadow: 0px 1px 2px 0px rgb(29 33 38 / 10%),
 		0px 5px 20px 0px rgb(29 33 38 / 3%);
 	color: rgba(0, 0, 0, 0.6);
+	outline: none;
 }
 
 .input:focus {
@@ -32,10 +33,10 @@
 }
 
 .errorInput {
-	width: 100%;
-	padding: 1rem 1.2rem;
+	padding: 13px 0 13px 24px;
 	border: 1px solid #cc0000;
-	border-radius: 5px;
+	border-radius: 20px;
+	outline: none;
 }
 
 .button {
