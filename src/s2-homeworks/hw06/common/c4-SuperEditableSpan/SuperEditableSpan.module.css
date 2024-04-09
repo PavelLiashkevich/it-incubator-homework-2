@@ -1,10 +1,20 @@
 .spanBlock {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 24px;
 }
 
 .span {
+    font-weight: 500;
+    line-height: 20px;
+    color: rgb(0, 128, 255);
+    cursor: pointer;    
 }
 
 .input {
+    padding: 8px 24px;
+    margin-bottom: 16px;
 }
 
 .pen {
