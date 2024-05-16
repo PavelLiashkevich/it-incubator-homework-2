@@ -1,8 +1,15 @@
 .container {
+	width: 50%;
 }
 
 .wrapper {
+	background: #f7f7f7;
+	margin: 35px 0;
+	padding: 15px 35px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2), 0 16px 20px rgba(0, 0, 0, 0.2);
+	border-radius: 15px;
 }
 
 .number {
+	font-size: 1.35em;
 }
