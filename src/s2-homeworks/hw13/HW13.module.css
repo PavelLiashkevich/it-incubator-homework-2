@@ -1,22 +1,46 @@
 .buttonsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 3rem;
 }
 
 .responseContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .imageContainer {
+    width: 42rem;
+    height: 32rem;
+    margin-right: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .image {
+    width: 100%;
+    object-fit: cover;
 }
 
 .textContainer{
+    max-width: 40%;
 }
 
 .code {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 500;
 }
 
 .text {
+    font-size: 1.3rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 .info {
+    font-size: 2rem;
+    font-weight: 500;
 }
