@@ -5,6 +5,10 @@
 	margin-bottom: 30px;
 }
 
+.pagination nav ul li {
+	margin-right: 10px;
+}
+
 .text1,
 .text2 {
 	font-family: 'Roboto', sans-serif;
@@ -16,6 +20,6 @@
 .select {
 	border: 1px solid #ecebeb;
 	border-radius: 2px;
-	width: 39px;
+	width: 55px;
 	height: 24px;
 }

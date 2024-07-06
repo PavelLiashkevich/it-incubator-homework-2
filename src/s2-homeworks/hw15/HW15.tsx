@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from 'react'
-import s2 from '../../s1-main/App.module.css'
-import s from './HW15.module.css'
+import { Backdrop, CircularProgress } from '@mui/material'
 import axios from 'axios'
-import SuperPagination from './common/c9-SuperPagination/SuperPagination'
+import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import s2 from '../../s1-main/App.module.css'
 import SuperSort from './common/c10-SuperSort/SuperSort'
+import SuperPagination from './common/c9-SuperPagination/SuperPagination'
+import s from './HW15.module.css'
 
 /*
  * 1 - дописать SuperPagination
@@ -49,18 +50,13 @@ const HW15 = () => {
 
 	const sendQuery = (params: any) => {
 		setLoading(true)
-		getTechs(params)
-			.then(res => {
-				if (res) {
-					setTechs(res.data.techs)
-					setTotalCount(res.data.totalCount)
-				}
-				setLoading(false)
-			})
-			.catch(error => {
-				console.error(error)
-				setLoading(false)
-			})
+		getTechs(params).then(res => {
+			if (res) {
+				setTechs(res.data.techs)
+				setTotalCount(res.data.totalCount)
+			}
+			setLoading(false)
+		})
 	}
 
 	const onChangePagination = (newPage: number, newCount: number) => {
@@ -78,7 +74,7 @@ const HW15 = () => {
 	const onChangeSort = (newSort: string) => {
 		setSort(newSort)
 		setPage(1)
-		
+
 		sendQuery({ sort: newSort, page, count })
 		setSearchParams({
 			sort: `${newSort}`,
@@ -111,11 +107,7 @@ const HW15 = () => {
 			<div className={s2.hwTitle}>Homework #15</div>
 
 			<div className={s2.hw}>
-				{idLoading && (
-					<div id={'hw15-loading'} className={s.loading}>
-						Loading...
-					</div>
-				)}
+				{idLoading && <div id={'hw15-loading'} className={s.loading}></div>}
 
 				<SuperPagination
 					page={page}
@@ -126,12 +118,12 @@ const HW15 = () => {
 
 				<div className={s.rowHeader}>
 					<div className={s.techHeader}>
-						tech
+						<div>Tech</div>
 						<SuperSort sort={sort} value={'tech'} onChange={onChangeSort} />
 					</div>
 
 					<div className={s.developerHeader}>
-						developer
+						<div>Developer</div>
 						<SuperSort
 							sort={sort}
 							value={'developer'}
